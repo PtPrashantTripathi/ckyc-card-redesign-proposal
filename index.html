@@ -1,0 +1,1253 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="An independent, voluntary redesign proposal for the CKYC card issued by CERSAI, Government of India. Created by Pt. Prashant Tripathi."
+        />
+        <meta name="author" content="Pt. Prashant Tripathi" />
+        <meta property="og:title" content="CKYC Card Redesign Proposal — CERSAI" />
+        <meta
+            property="og:description"
+            content="A modern, premium redesign proposal for the Central KYC Records Registry card, created voluntarily for CERSAI and the Government of India."
+        />
+        <meta property="og:image" content="cards/front.svg" />
+        <title>CKYC Card Redesign Proposal — CERSAI | Pt. Prashant Tripathi</title>
+
+        <!-- Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-C4NJD8J3MD"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
+            gtag("config", "G-C4NJD8J3MD");
+        </script>
+
+        <style>
+            /* ── Reset & Base ──────────────────────────────────────────── */
+            *,
+            *::before,
+            *::after {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+
+            :root {
+                --navy: #0d3554;
+                --navy-mid: #1a5276;
+                --navy-light: #2e7299;
+                --steel: #5a7a96;
+                --body-bg: #f4f6f9;
+                --card-bg: #ffffff;
+                --saffron: #ff9933;
+                --green: #138808;
+                --gold: #b8860b;
+                --text: #1a2a38;
+                --muted: #5a6a78;
+                --border: #d4dde6;
+                --radius: 12px;
+                --shadow: 0 4px 24px rgba(13, 53, 84, 0.1);
+                --shadow-lg: 0 12px 48px rgba(13, 53, 84, 0.16);
+            }
+
+            html {
+                scroll-behavior: smooth;
+            }
+
+            body {
+                font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+                background: var(--body-bg);
+                color: var(--text);
+                font-size: 16px;
+                line-height: 1.7;
+            }
+
+            a {
+                color: var(--navy-light);
+                text-decoration: none;
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+
+            /* ── Tricolor Banner ────────────────────────────────────────── */
+            .tricolor {
+                height: 6px;
+                background: linear-gradient(to right, var(--saffron) 33.3%, #ffffff 33.3% 66.6%, var(--green) 66.6%);
+            }
+
+            /* ── Top Header ─────────────────────────────────────────────── */
+            .site-header {
+                background: var(--navy);
+                color: #ffffff;
+                padding: 0;
+            }
+
+            .header-inner {
+                max-width: 980px;
+                margin: 0 auto;
+                padding: 28px 24px 24px;
+                display: flex;
+                align-items: center;
+                gap: 24px;
+            }
+
+            .header-logo {
+                width: 72px;
+                height: 72px;
+                border-radius: 50%;
+                object-fit: cover;
+                flex-shrink: 0;
+                border: 2px solid rgba(255, 255, 255, 0.25);
+            }
+
+            .header-text {
+                flex: 1;
+            }
+
+            .header-gov {
+                font-size: 11px;
+                letter-spacing: 2px;
+                color: #a8c8e8;
+                text-transform: uppercase;
+                margin-bottom: 6px;
+            }
+
+            .header-title {
+                font-size: 22px;
+                font-weight: 700;
+                line-height: 1.3;
+                color: #ffffff;
+                margin-bottom: 4px;
+            }
+
+            .header-subtitle {
+                font-size: 13px;
+                color: #a8c8e8;
+                letter-spacing: 0.3px;
+            }
+
+            .header-badge {
+                background: rgba(255, 255, 255, 0.1);
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                color: #ffffff;
+                font-size: 11px;
+                font-weight: 600;
+                letter-spacing: 1px;
+                padding: 6px 14px;
+                border-radius: 20px;
+                white-space: nowrap;
+                text-transform: uppercase;
+            }
+
+            /* ── Nav ────────────────────────────────────────────────────── */
+            .site-nav {
+                background: var(--navy-mid);
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            .nav-inner {
+                max-width: 980px;
+                margin: 0 auto;
+                padding: 0 24px;
+                display: flex;
+                gap: 0;
+            }
+
+            .nav-inner a {
+                color: #c8dff0;
+                font-size: 13.5px;
+                padding: 12px 18px;
+                display: block;
+                border-bottom: 3px solid transparent;
+                transition:
+                    color 0.2s,
+                    border-color 0.2s;
+                letter-spacing: 0.3px;
+            }
+
+            .nav-inner a:hover {
+                color: #ffffff;
+                border-bottom-color: var(--saffron);
+                text-decoration: none;
+            }
+
+            /* ── Main Content ───────────────────────────────────────────── */
+            main {
+                max-width: 980px;
+                margin: 0 auto;
+                padding: 0 24px 80px;
+            }
+
+            /* ── Section Wrapper ────────────────────────────────────────── */
+            .section {
+                margin-top: 64px;
+            }
+
+            .section-label {
+                font-size: 11px;
+                letter-spacing: 2.5px;
+                text-transform: uppercase;
+                color: var(--navy-light);
+                font-weight: 600;
+                margin-bottom: 10px;
+            }
+
+            .section-title {
+                font-size: 26px;
+                font-weight: 700;
+                color: var(--navy);
+                margin-bottom: 6px;
+                line-height: 1.3;
+            }
+
+            .section-rule {
+                width: 48px;
+                height: 3px;
+                background: var(--saffron);
+                border-radius: 2px;
+                margin-bottom: 24px;
+            }
+
+            /* ── Disclaimer Ribbon ──────────────────────────────────────── */
+            .disclaimer-ribbon {
+                margin-top: 40px;
+                background: #fffbf0;
+                border: 1px solid #f0d080;
+                border-left: 4px solid var(--saffron);
+                border-radius: var(--radius);
+                padding: 16px 20px;
+                font-size: 13.5px;
+                color: #7a5c10;
+                line-height: 1.6;
+            }
+
+            .disclaimer-ribbon strong {
+                color: #5a3e00;
+            }
+
+            /* ── Letter ─────────────────────────────────────────────────── */
+            .letter-card {
+                background: var(--card-bg);
+                border: 1px solid var(--border);
+                border-radius: var(--radius);
+                box-shadow: var(--shadow);
+                padding: 48px 52px;
+                margin-top: 32px;
+            }
+
+            .letter-date {
+                font-size: 14px;
+                color: var(--muted);
+                margin-bottom: 28px;
+            }
+
+            .letter-to {
+                margin-bottom: 28px;
+            }
+
+            .letter-to p {
+                font-size: 15px;
+                line-height: 1.6;
+            }
+
+            .letter-to strong {
+                font-size: 16px;
+                color: var(--navy);
+            }
+
+            .letter-subject {
+                background: #f0f4f8;
+                border-left: 4px solid var(--navy);
+                padding: 12px 16px;
+                margin: 24px 0;
+                font-size: 14.5px;
+                font-weight: 600;
+                color: var(--navy);
+                border-radius: 0 6px 6px 0;
+            }
+
+            .letter-body p {
+                font-size: 15.5px;
+                margin-bottom: 18px;
+                color: #2a3a48;
+                line-height: 1.8;
+            }
+
+            .letter-body ul {
+                margin: 0 0 18px 24px;
+                font-size: 15px;
+                color: #2a3a48;
+            }
+
+            .letter-body ul li {
+                margin-bottom: 8px;
+            }
+
+            .letter-sign {
+                margin-top: 36px;
+                font-size: 15px;
+                line-height: 1.8;
+            }
+
+            .letter-sign .name {
+                font-size: 17px;
+                font-weight: 700;
+                color: var(--navy);
+                margin-top: 8px;
+            }
+
+            .letter-sign .title-line {
+                font-size: 13.5px;
+                color: var(--muted);
+            }
+
+            /* ── Comparison Cards ────────────────────────────────────────── */
+            .card-comparison {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 32px;
+                margin-top: 32px;
+            }
+
+            @media (max-width: 700px) {
+                .card-comparison {
+                    grid-template-columns: 1fr;
+                }
+                .letter-card {
+                    padding: 28px 20px;
+                }
+                .header-inner {
+                    flex-wrap: wrap;
+                }
+                .header-badge {
+                    display: none;
+                }
+            }
+
+            .showcase-panel {
+                background: var(--card-bg);
+                border: 1px solid var(--border);
+                border-radius: var(--radius);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+            }
+
+            .panel-header {
+                padding: 16px 20px 14px;
+                border-bottom: 1px solid var(--border);
+                display: flex;
+                align-items: center;
+                gap: 12px;
+            }
+
+            .panel-dot {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                flex-shrink: 0;
+            }
+
+            .dot-existing {
+                background: #e0a030;
+            }
+            .dot-proposed {
+                background: #138808;
+            }
+
+            .panel-label {
+                font-size: 11px;
+                letter-spacing: 1.5px;
+                text-transform: uppercase;
+                font-weight: 700;
+                color: var(--muted);
+            }
+
+            .panel-title {
+                font-size: 15px;
+                font-weight: 700;
+                color: var(--navy);
+                flex: 1;
+            }
+
+            .panel-body {
+                padding: 20px;
+            }
+
+            .panel-body img,
+            .panel-body object {
+                width: 100%;
+                height: auto;
+                border-radius: 8px;
+                display: block;
+            }
+
+            .placeholder-box {
+                background: #f0f4f8;
+                border: 2px dashed var(--border);
+                border-radius: 8px;
+                padding: 48px 24px;
+                text-align: center;
+            }
+
+            .placeholder-box .ph-icon {
+                font-size: 40px;
+                margin-bottom: 12px;
+                display: block;
+            }
+
+            .placeholder-box p {
+                font-size: 13.5px;
+                color: var(--muted);
+                line-height: 1.6;
+            }
+
+            .placeholder-box code {
+                display: block;
+                margin-top: 12px;
+                background: #e0e8f0;
+                padding: 8px 12px;
+                border-radius: 6px;
+                font-size: 12px;
+                color: var(--navy);
+                text-align: left;
+                word-break: break-all;
+            }
+
+            .panel-description {
+                margin-top: 16px;
+                font-size: 13.5px;
+                color: var(--muted);
+                line-height: 1.7;
+            }
+
+            /* ── Full-width card showcase ───────────────────────────────── */
+            .full-showcase {
+                background: var(--card-bg);
+                border: 1px solid var(--border);
+                border-radius: var(--radius);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                margin-top: 40px;
+            }
+
+            .full-showcase + .full-showcase {
+                margin-top: 32px;
+            }
+
+            .full-panel-header {
+                padding: 18px 24px 16px;
+                border-bottom: 1px solid var(--border);
+                display: flex;
+                align-items: center;
+                gap: 14px;
+                background: #f8fafc;
+            }
+
+            .full-panel-header .panel-dot {
+                width: 12px;
+                height: 12px;
+            }
+
+            .full-panel-title {
+                font-size: 17px;
+                font-weight: 700;
+                color: var(--navy);
+                flex: 1;
+            }
+
+            .full-panel-tag {
+                font-size: 11px;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                font-weight: 700;
+                background: #e8f0f8;
+                color: var(--navy-mid);
+                padding: 4px 12px;
+                border-radius: 20px;
+            }
+
+            .full-panel-body {
+                padding: 28px;
+            }
+
+            .full-panel-body img {
+                width: 100%;
+                max-width: 820px;
+                height: auto;
+                display: block;
+                margin: 0 auto;
+                border-radius: 10px;
+                box-shadow: var(--shadow-lg);
+            }
+
+            .design-notes {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 16px;
+                margin-top: 28px;
+            }
+
+            .design-note {
+                background: #f4f7fa;
+                border: 1px solid var(--border);
+                border-radius: 8px;
+                padding: 16px;
+            }
+
+            .note-icon {
+                font-size: 22px;
+                margin-bottom: 8px;
+            }
+
+            .note-title {
+                font-size: 13px;
+                font-weight: 700;
+                color: var(--navy);
+                margin-bottom: 4px;
+            }
+
+            .note-desc {
+                font-size: 12.5px;
+                color: var(--muted);
+                line-height: 1.6;
+            }
+
+            /* ── Creator Card ───────────────────────────────────────────── */
+            .creator-card {
+                background: var(--card-bg);
+                border: 1px solid var(--border);
+                border-radius: var(--radius);
+                box-shadow: var(--shadow);
+                padding: 36px 40px;
+                margin-top: 32px;
+                display: flex;
+                gap: 32px;
+                align-items: flex-start;
+            }
+
+            @media (max-width: 600px) {
+                .creator-card {
+                    flex-direction: column;
+                    padding: 24px;
+                }
+            }
+
+            .creator-avatar {
+                width: 88px;
+                height: 88px;
+                background: var(--navy);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 32px;
+                font-weight: 700;
+                color: #ffffff;
+                flex-shrink: 0;
+                letter-spacing: 1px;
+            }
+
+            .creator-info {
+                flex: 1;
+            }
+
+            .creator-name {
+                font-size: 22px;
+                font-weight: 700;
+                color: var(--navy);
+                margin-bottom: 4px;
+            }
+
+            .creator-role {
+                font-size: 13.5px;
+                color: var(--muted);
+                margin-bottom: 16px;
+            }
+
+            .creator-bio {
+                font-size: 15px;
+                color: #2a3a48;
+                line-height: 1.75;
+                margin-bottom: 20px;
+            }
+
+            .creator-links {
+                display: flex;
+                gap: 16px;
+                flex-wrap: wrap;
+            }
+
+            .creator-link {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                background: #f0f4f8;
+                border: 1px solid var(--border);
+                border-radius: 8px;
+                padding: 8px 14px;
+                font-size: 13.5px;
+                color: var(--navy);
+                font-weight: 500;
+                transition:
+                    background 0.15s,
+                    border-color 0.15s;
+                text-decoration: none;
+            }
+
+            .creator-link:hover {
+                background: #e0eaf4;
+                border-color: var(--navy-light);
+                text-decoration: none;
+            }
+
+            .creator-link svg {
+                width: 16px;
+                height: 16px;
+                flex-shrink: 0;
+            }
+
+            /* ── License Section ────────────────────────────────────────── */
+            .license-card {
+                background: var(--card-bg);
+                border: 1px solid var(--border);
+                border-radius: var(--radius);
+                box-shadow: var(--shadow);
+                padding: 32px 36px;
+                margin-top: 32px;
+                display: flex;
+                gap: 28px;
+                align-items: flex-start;
+            }
+
+            @media (max-width: 600px) {
+                .license-card {
+                    flex-direction: column;
+                    padding: 24px;
+                }
+            }
+
+            .license-badge-wrap {
+                flex-shrink: 0;
+            }
+
+            .license-badge-wrap img {
+                display: block;
+            }
+
+            .license-info {
+                flex: 1;
+            }
+
+            .license-title {
+                font-size: 18px;
+                font-weight: 700;
+                color: var(--navy);
+                margin-bottom: 8px;
+            }
+
+            .license-body {
+                font-size: 14.5px;
+                color: #2a3a48;
+                line-height: 1.75;
+                margin-bottom: 16px;
+            }
+
+            .license-permissions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-bottom: 16px;
+            }
+
+            .perm-tag {
+                font-size: 12px;
+                font-weight: 700;
+                letter-spacing: 0.5px;
+                padding: 5px 12px;
+                border-radius: 20px;
+            }
+
+            .perm-allow {
+                background: #e6f4ec;
+                color: #1a6b2e;
+            }
+            .perm-require {
+                background: #fff3e0;
+                color: #7a4500;
+            }
+
+            .license-attribution {
+                background: #f0f4f8;
+                border: 1px solid var(--border);
+                border-radius: 8px;
+                padding: 14px 16px;
+                font-size: 13px;
+                color: var(--navy);
+                line-height: 1.6;
+            }
+
+            .license-attribution strong {
+                display: block;
+                margin-bottom: 4px;
+                font-size: 12px;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                color: var(--steel);
+            }
+
+            /* ── Footer ─────────────────────────────────────────────────── */
+            .site-footer {
+                background: var(--navy);
+                color: #a8c8e8;
+                margin-top: 80px;
+            }
+
+            .footer-inner {
+                max-width: 980px;
+                margin: 0 auto;
+                padding: 40px 24px 32px;
+                display: flex;
+                gap: 48px;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+
+            .footer-col h4 {
+                font-size: 12px;
+                letter-spacing: 1.5px;
+                text-transform: uppercase;
+                color: #c8dff0;
+                font-weight: 700;
+                margin-bottom: 12px;
+            }
+
+            .footer-col p,
+            .footer-col a {
+                font-size: 13.5px;
+                color: #8aa8c0;
+                line-height: 1.8;
+                display: block;
+            }
+
+            .footer-col a:hover {
+                color: #ffffff;
+            }
+
+            .footer-bottom {
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+                padding: 16px 24px;
+                text-align: center;
+                font-size: 12.5px;
+                color: #7a9aac;
+                max-width: 980px;
+                margin: 0 auto;
+            }
+
+            /* ── Scroll hint ────────────────────────────────────────────── */
+            .scroll-hint {
+                height: 3px;
+                background: linear-gradient(to right, var(--saffron), #ffffff, var(--green));
+                margin-top: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Tricolor top -->
+        <div class="tricolor"></div>
+
+        <!-- Site Header -->
+        <header class="site-header">
+            <div class="header-inner">
+                <img src="assets/images/logo.png" alt="CERSAI Logo" class="header-logo" />
+                <div class="header-text">
+                    <p class="header-gov">Government of India</p>
+                    <h1 class="header-title">
+                        Central Registry of Securitisation Asset<br />Reconstruction and Security Interest of India
+                    </h1>
+                    <p class="header-subtitle">CKYC Card Redesign Proposal — Independent Design Submission</p>
+                </div>
+                <span class="header-badge">Design Proposal</span>
+            </div>
+            <nav class="site-nav">
+                <div class="nav-inner">
+                    <a href="#letter">Open Letter</a>
+                    <a href="#existing">Existing Card</a>
+                    <a href="#front">Front Side</a>
+                    <a href="#back">Back Side</a>
+                    <a href="#creator">Creator</a>
+                    <a href="#license">License</a>
+                </div>
+            </nav>
+        </header>
+
+        <div class="scroll-hint"></div>
+
+        <main>
+            <!-- ── DISCLAIMER ─────────────────────────────────────────── -->
+            <div class="disclaimer-ribbon" style="margin-top: 40px">
+                <strong>⚠ Disclaimer:</strong> This is an independent, voluntary design proposal. It has not been
+                commissioned, reviewed, or endorsed by CERSAI, the Reserve Bank of India, the Ministry of Finance, or
+                any other government authority. This is not an official CERSAI design. The CERSAI name and logo belong
+                to CERSAI and are used here solely for illustrative purposes within this design proposal.
+            </div>
+
+            <!-- ── OPEN LETTER ─────────────────────────────────────────── -->
+            <section class="section" id="letter">
+                <p class="section-label">Open Letter</p>
+                <h2 class="section-title">To the Leadership of CERSAI</h2>
+                <div class="section-rule"></div>
+
+                <div class="letter-card">
+                    <p class="letter-date">17 June 2026</p>
+
+                    <div class="letter-to">
+                        <p><strong>The Chairperson / Chief General Manager</strong></p>
+                        <p>
+                            Central Registry of Securitisation Asset Reconstruction and Security Interest of India
+                            (CERSAI)
+                        </p>
+                        <p>22nd Floor, HUDCO Vishala Building, Bhikaji Cama Place, New Delhi — 110 066</p>
+                    </div>
+
+                    <div class="letter-subject">
+                        Subject: Voluntary Proposal for the Redesign of the Central KYC (CKYC) Card — Good-Faith Design
+                        Submission
+                    </div>
+
+                    <div class="letter-body">
+                        <p>Respected Sir / Madam,</p>
+
+                        <p>
+                            I write to you with the deepest respect for the institution of CERSAI and its critical role
+                            in India's financial and legal infrastructure. The Central KYC Records Registry has been an
+                            important instrument in reducing redundancy across the Indian financial system, and the work
+                            CERSAI has done in building and operating this registry at scale deserves sincere
+                            appreciation.
+                        </p>
+
+                        <p>
+                            I recently had occasion to review the existing CKYC card design — the physical identity
+                            document issued to citizens as evidence of their Central KYC registration. While I recognise
+                            the functional purpose the current design serves, I respectfully submit that, in my personal
+                            assessment, the existing card does not yet reflect the same level of visual quality,
+                            usability, and security-oriented design that citizens have come to expect from major Indian
+                            government identity documents, such as:
+                        </p>
+
+                        <ul>
+                            <li>
+                                <strong>Aadhaar Card</strong> — a world-recognised model of clean, accessible government
+                                ID design
+                            </li>
+                            <li>
+                                <strong>PAN Card</strong> — distinguished by clarity, hierarchy, and compact security
+                                features
+                            </li>
+                            <li><strong>Driving Licence</strong> — modern holographic and machine-readable design</li>
+                            <li><strong>Voter ID Card</strong> — recently refreshed with improved visual standards</li>
+                        </ul>
+
+                        <p>
+                            Motivated entirely by a desire to contribute to the improvement of citizen-facing government
+                            services, I have voluntarily prepared a redesigned CKYC card — a proposal that I offer
+                            freely to CERSAI for consideration, adaptation, or implementation in any form CERSAI sees
+                            fit.
+                        </p>
+
+                        <p>The proposed redesign aims to improve:</p>
+
+                        <ul>
+                            <li>
+                                <strong>Visual hierarchy</strong> — so that the most critical information (KYC
+                                Identifier, cardholder name) is immediately visible at a glance
+                            </li>
+                            <li>
+                                <strong>Readability</strong> — through consistent typography, generous field spacing,
+                                and high-contrast field labels
+                            </li>
+                            <li>
+                                <strong>User experience</strong> — by presenting information in a logical, scannable
+                                layout that mirrors the citizen's mental model
+                            </li>
+                            <li>
+                                <strong>Modern appearance</strong> — with clean geometry, rounded card boundaries, and a
+                                premium finish aligned with contemporary Indian government design standards
+                            </li>
+                            <li>
+                                <strong>Security-oriented visual elements</strong> — including guilloche wave patterns,
+                                Ashoka Chakra-inspired watermarks, micro-line backgrounds, and security barcode strips
+                            </li>
+                            <li>
+                                <strong>Alignment with the Indian national identity</strong> — through respectful use of
+                                the Tricolor palette (saffron, white, and green) and deep navy government-authority
+                                tones
+                            </li>
+                        </ul>
+
+                        <p>
+                            This proposal is released under the
+                            <strong>Creative Commons Attribution 4.0 International (CC BY 4.0)</strong> license. CERSAI,
+                            any department of the Government of India, or any authorised implementation partner is
+                            entirely free to use, modify, adapt, and implement this design without any fee or royalty.
+                            The only condition is that appropriate credit is given to the original creator.
+                        </p>
+
+                        <p>
+                            I make no claim to authority over CERSAI's design decisions and understand that the actual
+                            card design involves considerations far beyond visual aesthetics — including regulatory
+                            requirements, printing technology, legal mandates, and security specifications. This
+                            proposal is intended purely as creative input and a demonstration of what is possible.
+                        </p>
+
+                        <p>
+                            I hope this small contribution is received in the spirit in which it is offered — as a
+                            gesture of goodwill from a citizen who believes that great design and great governance are
+                            not mutually exclusive.
+                        </p>
+
+                        <p>With warm regards and the highest respect for CERSAI's mission,</p>
+
+                        <div class="letter-sign">
+                            <p>Sincerely,</p>
+                            <p class="name">Pt. Prashant Tripathi</p>
+                            <p class="title-line">Independent Software Engineer &amp; Open-Source Contributor</p>
+                            <p class="title-line">New Delhi, India</p>
+                            <p class="title-line" style="margin-top: 4px">
+                                <a href="mailto:PtPrashantTripathi@outlook.com">PtPrashantTripathi@outlook.com</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ── CARD COMPARISON ─────────────────────────────────────── -->
+            <section class="section" id="existing">
+                <p class="section-label">Design Comparison</p>
+                <h2 class="section-title">Existing vs. Proposed</h2>
+                <div class="section-rule"></div>
+
+                <div class="card-comparison">
+                    <div class="showcase-panel">
+                        <div class="panel-header">
+                            <span class="panel-dot dot-existing"></span>
+                            <div>
+                                <p class="panel-label">Current Design</p>
+                                <p class="panel-title">Existing CKYC Card</p>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <img
+                                src="assets/images/existing-ckyc-card.png"
+                                alt="Existing CKYC Card"
+                                id="existing-card"
+                            />
+                            <p class="panel-description">
+                                The current card uses a plain white background with standard system fonts and a
+                                two-panel layout. While functional, it lacks a defined visual hierarchy, security
+                                background elements, and the premium finish seen in comparable Indian government
+                                identity documents.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="showcase-panel">
+                        <div class="panel-header">
+                            <span class="panel-dot dot-proposed"></span>
+                            <div>
+                                <p class="panel-label">Proposed Redesign — Front</p>
+                                <p class="panel-title">New CKYC Card (Front)</p>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <img src="cards/front.svg" alt="Proposed CKYC Card — Front Side" />
+                            <p class="panel-description">
+                                Deep navy header with the CERSAI logo, prominent KYC Identifier banner, clean data grid
+                                with tiered typography, photo zone with security corner brackets, guilloche background,
+                                and Tricolor strips fully clipped within rounded card boundaries.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ── FRONT SIDE FULL SHOWCASE ────────────────────────────── -->
+            <section class="section" id="front">
+                <p class="section-label">Proposed Design</p>
+                <h2 class="section-title">Front Side — Full Detail</h2>
+                <div class="section-rule"></div>
+
+                <div class="full-showcase">
+                    <div class="full-panel-header">
+                        <span class="panel-dot dot-proposed"></span>
+                        <span class="full-panel-title">Proposed CKYC Card — Front Side</span>
+                        <span class="full-panel-tag">Production-quality SVG</span>
+                    </div>
+                    <div class="full-panel-body">
+                        <img src="cards/front.svg" alt="Proposed CKYC Card — Front Side (Full)" />
+
+                        <div class="design-notes">
+                            <div class="design-note">
+                                <div class="note-icon">🏛️</div>
+                                <p class="note-title">Government Identity</p>
+                                <p class="note-desc">
+                                    Deep navy header, CERSAI logo, "Government of India" label, and Digital India badge
+                                    establish official authority instantly.
+                                </p>
+                            </div>
+                            <div class="design-note">
+                                <div class="note-icon">🔢</div>
+                                <p class="note-title">KYC Identifier</p>
+                                <p class="note-desc">
+                                    The KYC number is given its own dedicated banner row in high-contrast gold on navy —
+                                    impossible to miss at a glance.
+                                </p>
+                            </div>
+                            <div class="design-note">
+                                <div class="note-icon">📐</div>
+                                <p class="note-title">Tricolor Strips</p>
+                                <p class="note-desc">
+                                    Saffron, white, and green bands are drawn inside the card's <code>clipPath</code>,
+                                    ensuring they never bleed past rounded corners.
+                                </p>
+                            </div>
+                            <div class="design-note">
+                                <div class="note-icon">🔐</div>
+                                <p class="note-title">Security Patterns</p>
+                                <p class="note-desc">
+                                    Guilloche sinusoidal waves, Ashoka Chakra radial watermark, micro-line diagonal
+                                    fill, and a security barcode strip at the base.
+                                </p>
+                            </div>
+                            <div class="design-note">
+                                <div class="note-icon">🖋️</div>
+                                <p class="note-title">Typography Hierarchy</p>
+                                <p class="note-desc">
+                                    Three-level hierarchy: muted uppercase labels → semibold values → bold primary
+                                    fields. Information is scannable in under two seconds.
+                                </p>
+                            </div>
+                            <div class="design-note">
+                                <div class="note-icon">📷</div>
+                                <p class="note-title">Photo Zone</p>
+                                <p class="note-desc">
+                                    Framed with a rounded clip and security corner brackets. Replace the SVG placeholder
+                                    with an
+                                    <code>&lt;image&gt;</code> tag for production.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ── BACK SIDE FULL SHOWCASE ─────────────────────────────── -->
+            <section class="section" id="back">
+                <p class="section-label">Proposed Design</p>
+                <h2 class="section-title">Back Side — Full Detail</h2>
+                <div class="section-rule"></div>
+
+                <div class="full-showcase">
+                    <div class="full-panel-header">
+                        <span class="panel-dot dot-proposed"></span>
+                        <span class="full-panel-title">Proposed CKYC Card — Back Side</span>
+                        <span class="full-panel-tag">Production-quality SVG</span>
+                    </div>
+                    <div class="full-panel-body">
+                        <img src="cards/back.svg" alt="Proposed CKYC Card — Back Side (Full)" />
+
+                        <div class="design-notes">
+                            <div class="design-note">
+                                <div class="note-icon">📱</div>
+                                <p class="note-title">QR Verification</p>
+                                <p class="note-desc">
+                                    A dedicated QR panel links to the CERSAI digital verification portal, enabling
+                                    instant authentication via smartphone.
+                                </p>
+                            </div>
+                            <div class="design-note">
+                                <div class="note-icon">🏠</div>
+                                <p class="note-title">Dual Address Fields</p>
+                                <p class="note-desc">
+                                    Address as per POI and current address as per POA are clearly separated with saffron
+                                    and green accent underlines respectively.
+                                </p>
+                            </div>
+                            <div class="design-note">
+                                <div class="note-icon">⚖️</div>
+                                <p class="note-title">Legal Attribution</p>
+                                <p class="note-desc">
+                                    SARFAESI Act, 2002 issuance authority is stated clearly at the base, along with the
+                                    CERSAI website and helpline.
+                                </p>
+                            </div>
+                            <div class="design-note">
+                                <div class="note-icon">💧</div>
+                                <p class="note-title">Ghost Watermark</p>
+                                <p class="note-desc">
+                                    A large, faint "CERSAI" text watermark and Ashoka Chakra pattern covers the body,
+                                    adding an additional security layer.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ── CREATOR ─────────────────────────────────────────────── -->
+            <section class="section" id="creator">
+                <p class="section-label">About</p>
+                <h2 class="section-title">Proposal Creator</h2>
+                <div class="section-rule"></div>
+
+                <div class="creator-card">
+                    <div class="creator-avatar">PT</div>
+                    <div class="creator-info">
+                        <h3 class="creator-name">Pt. Prashant Tripathi</h3>
+                        <p class="creator-role">Independent Software Engineer &amp; Open-Source Contributor</p>
+                        <p class="creator-bio">
+                            Independent software engineer, open-source contributor, and technology enthusiast with an
+                            interest in improving digital and citizen-facing experiences through thoughtful design and
+                            engineering. Passionate about the intersection of good governance and modern technology, and
+                            committed to contributing to India's digital public infrastructure in whatever way he can.
+                        </p>
+                        <div class="creator-links">
+                            <a href="mailto:PtPrashantTripathi@outlook.com" class="creator-link">
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.8"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <rect x="2" y="4" width="20" height="16" rx="2" />
+                                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                                </svg>
+                                PtPrashantTripathi@outlook.com
+                            </a>
+                            <a
+                                href="https://github.com/PtPrashantTripathi"
+                                target="_blank"
+                                rel="noopener"
+                                class="creator-link"
+                            >
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.071 1.531 1.031 1.531 1.031.892 1.529 2.341 1.088 2.91.832.091-.647.35-1.088.636-1.339-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.254-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.748-1.025 2.748-1.025.546 1.377.202 2.393.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.416 22 12c0-5.523-4.477-10-10-10z"
+                                    />
+                                </svg>
+                                @PtPrashantTripathi
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ── LICENSE ─────────────────────────────────────────────── -->
+            <section class="section" id="license">
+                <p class="section-label">Licensing</p>
+                <h2 class="section-title">Free to Use — Attribution Required</h2>
+                <div class="section-rule"></div>
+
+                <div class="license-card">
+                    <div class="license-badge-wrap">
+                        <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">
+                            <img
+                                src="https://licensebuttons.net/l/by/4.0/88x31.png"
+                                alt="CC BY 4.0 License Badge"
+                                width="88"
+                                height="31"
+                                style="border-radius: 4px"
+                            />
+                        </a>
+                        <p style="font-size: 11px; color: var(--muted); margin-top: 8px; text-align: center">
+                            CC BY 4.0
+                        </p>
+                    </div>
+                    <div class="license-info">
+                        <h3 class="license-title">Creative Commons Attribution 4.0 International</h3>
+                        <p class="license-body">
+                            This design proposal is released under the CC BY 4.0 license — one of the most permissive
+                            open licenses available. CERSAI, the Government of India, and any authorised partner may
+                            freely use, modify, and implement this design without any royalty, fee, or prior permission.
+                            The only requirement is attribution to the original creator.
+                        </p>
+                        <div class="license-permissions">
+                            <span class="perm-tag perm-allow">✓ Commercial use</span>
+                            <span class="perm-tag perm-allow">✓ Modification &amp; adaptation</span>
+                            <span class="perm-tag perm-allow">✓ Redistribution</span>
+                            <span class="perm-tag perm-allow">✓ Government implementation</span>
+                            <span class="perm-tag perm-require">⚑ Attribution required</span>
+                        </div>
+                        <div class="license-attribution">
+                            <strong>Required attribution wording</strong>
+                            CKYC Card Redesign Concept by Pt. Prashant Tripathi
+                            (https://github.com/PtPrashantTripathi/ckyc-redesign-proposal) Licensed under CC BY 4.0 —
+                            https://creativecommons.org/licenses/by/4.0/
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="site-footer">
+            <div class="footer-inner">
+                <div class="footer-col">
+                    <h4>Project</h4>
+                    <a href="#letter">Open Letter</a>
+                    <a href="#front">Front Side Design</a>
+                    <a href="#back">Back Side Design</a>
+                    <a
+                        href="https://github.com/PtPrashantTripathi/ckyc-redesign-proposal"
+                        target="_blank"
+                        rel="noopener"
+                        >GitHub Repository</a
+                    >
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <a href="cards/front.svg" download>Download front.svg</a>
+                    <a href="cards/back.svg" download>Download back.svg</a>
+                    <a href="LICENSE" target="_blank">View LICENSE</a>
+                    <a href="README.md" target="_blank">View README</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <a href="mailto:PtPrashantTripathi@outlook.com">PtPrashantTripathi@outlook.com</a>
+                    <a href="https://github.com/PtPrashantTripathi" target="_blank" rel="noopener"
+                        >github.com/PtPrashantTripathi</a
+                    >
+                </div>
+                <div class="footer-col">
+                    <h4>Official Links</h4>
+                    <a href="https://www.cersai.org.in" target="_blank" rel="noopener">CERSAI Official Website</a>
+                    <a href="https://www.india.gov.in" target="_blank" rel="noopener">Government of India</a>
+                    <a href="https://www.rbi.org.in" target="_blank" rel="noopener">Reserve Bank of India</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>
+                    This is an independent design proposal. Not affiliated with or endorsed by CERSAI or the Government
+                    of India. &nbsp;|&nbsp; Designed with ❤️ for India &nbsp;🇮🇳 &nbsp;|&nbsp;
+                    <a
+                        href="https://creativecommons.org/licenses/by/4.0/"
+                        target="_blank"
+                        rel="noopener"
+                        style="color: #8aa8c0"
+                        >CC BY 4.0</a
+                    >
+                    — © 2026 Pt. Prashant Tripathi
+                </p>
+            </div>
+        </footer>
+
+        <div class="tricolor"></div>
+    </body>
+</html>
