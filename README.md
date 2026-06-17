@@ -55,15 +55,15 @@ Government of India.
 
 ## Design Goals
 
-| Goal                    | Description                                                                                                   |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------- |
-| **Visual hierarchy**    | Clear distinction between primary (name, KYC ID) and secondary (address, dates) information                   |
-| **Readability**         | High-contrast field labels and values; generous spacing; no visual clutter                                    |
-| **Security aesthetics** | Guilloche wave patterns, Ashoka Chakra-inspired watermarks, micro-line backgrounds, barcode security strips   |
-| **Indian identity**     | Tricolor strips (saffron, white, green) anchored within rounded card boundaries; deep navy government palette |
-| **Typography & spacing** | Clean type scale, rounded corners, grid-aligned fields — consistent with Aadhaar and PAN card conventions    |
-| **Two-sided design**    | Front holds identity fields; back holds address, QR verification, and legal information                       |
-| **Editable SVG**        | All text fields are plain SVG `<text>` elements — easy to update programmatically or in any vector editor     |
+| Goal                     | Description                                                                                                   |
+| ------------------------ | ------------------------------------------------------------------------------------------------------------- |
+| **Visual hierarchy**     | Clear distinction between primary (name, KYC ID) and secondary (address, dates) information                   |
+| **Readability**          | High-contrast field labels and values; generous spacing; no visual clutter                                    |
+| **Security aesthetics**  | Guilloche wave patterns, Ashoka Chakra-inspired watermarks, micro-line backgrounds, barcode security strips   |
+| **Indian identity**      | Tricolor strips (saffron, white, green) anchored within rounded card boundaries; deep navy government palette |
+| **Typography & spacing** | Clean type scale, rounded corners, grid-aligned fields — consistent with Aadhaar and PAN card conventions     |
+| **Two-sided design**     | Front holds identity fields; back holds address, QR verification, and legal information                       |
+| **Editable SVG**         | All text fields are plain SVG `<text>` elements — easy to update programmatically or in any vector editor     |
 
 ---
 
@@ -79,8 +79,8 @@ ckyc-card-redesign-proposal/
 │       ├── logo.png                 # CERSAI official logo
 │       └── existing-ckyc-card.png  # Current CKYC card (reference)
 ├── cards/
-│   ├── front.svg           # Proposed front side of the CKYC card
-│   └── back.svg            # Proposed back side of the CKYC card
+│   ├── ckyc_card_front.svg           # Proposed front side of the CKYC card
+│   └── ckyc_card_back.svg            # Proposed back side of the CKYC card
 ├── index.html              # Presentation page for GitHub Pages
 ├── package.json            # pnpm formatter (prettier + @prettier/plugin-xml)
 ├── README.md               # This file
@@ -92,7 +92,7 @@ ckyc-card-redesign-proposal/
 ## Card Preview
 
 <p align="center">
-  <img src="cards/output.png" alt="Proposed CKYC Card — Front Side" width="680"/>
+  <img src="assets/images/ckyc_card_output.png" alt="Proposed CKYC Card — Front Side" width="680"/>
 </p>
 
 ### Proposed Front Side
@@ -108,14 +108,15 @@ ckyc-card-redesign-proposal/
 - Guilloche wave pattern background
 - Ashoka Chakra-inspired radial watermark
 - Security barcode strip at bottom
-- [Digital India logo](https://en.wikipedia.org/wiki/Digital_India#/media/File:Digital_India_logo.svg) (MeitY official mark, embedded as SVG)
+- [Digital India logo](https://en.wikipedia.org/wiki/Digital_India#/media/File:Digital_India_logo.svg)
+  (MeitY official mark, embedded as SVG)
 
 ### Proposed Back Side
 
 **Back side contains:**
 
-- Identical header to front: tricolor strips, CERSAI logo, "GOVERNMENT OF INDIA" /
-  "Central KYC Records Registry", Digital India logo, KYC Identifier band
+- Identical header to front: tricolor strips, CERSAI logo, "GOVERNMENT OF INDIA"
+  / "Central KYC Records Registry", Digital India logo, KYC Identifier band
 - QR code panel for digital verification (scan-to-verify + KYC number)
 - Address as per Proof of Identity (POI)
 - Current Address as per Proof of Address (POA)
@@ -194,9 +195,9 @@ open index.html
 
 ### Replace sample data
 
-The SVG files use plain `<text>` elements. Open `cards/front.svg` or
-`cards/back.svg` in any text editor or vector application and search for
-the sample values:
+The SVG files use plain `<text>` elements. Open `cards/ckyc_card_front.svg` or
+`cards/ckyc_card_back.svg` in any text editor or vector application and search
+for the sample values:
 
 - `MR PRASHANT TRIPATHI` → replace with cardholder name
 - `60021142168221` → replace with KYC identifier
@@ -216,7 +217,7 @@ PtPrashantTripathi@outlook.com **GitHub:**
 **Digital India logo** embedded in the card front is the official mark of the
 Ministry of Electronics & Information Technology (MeitY), Government of India.
 Source:
-[Wikipedia — Digital\_India\_logo.svg](https://en.wikipedia.org/wiki/Digital_India#/media/File:Digital_India_logo.svg)
+[Wikipedia — Digital_India_logo.svg](https://en.wikipedia.org/wiki/Digital_India#/media/File:Digital_India_logo.svg)
 
 If you use, adapt, or implement this design, please include the following
 attribution:

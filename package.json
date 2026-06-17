@@ -6,7 +6,10 @@
     "scripts": {
         "format": "prettier --write .",
         "format:check": "prettier --check .",
-        "build": "magick -density 300 \\( cards/front.svg -background white -alpha remove -alpha off -bordercolor white -border 5 \\) \\( cards/back.svg -background white -alpha remove -alpha off -bordercolor white -border 5 \\) +append -background white -gravity center -bordercolor white -border 20 cards/output.png"
+        "build-front": "magick -density 300 cards/ckyc_card_front.svg -background white -alpha remove -alpha off -bordercolor white -border 5 assets/images/ckyc_card_front.png",
+        "build-back": "magick -density 300 cards/ckyc_card_back.svg -background white -alpha remove -alpha off -bordercolor white -border 5 assets/images/ckyc_card_back.png",
+        "merge-png": "magick assets/images/ckyc_card_front.png assets/images/ckyc_card_back.png -background white -gravity center -bordercolor white -border 20 +append assets/images/ckyc_card_output.png",
+        "publish": "npm run build-front && npm run build-back && npm run merge-png"
     },
     "devDependencies": {
         "@prettier/plugin-xml": "^3.4.1",
