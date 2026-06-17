@@ -1,0 +1,14 @@
+{
+    "name": "ckyc-card-redesign-proposal",
+    "version": "1.0.0",
+    "description": "CKYC Card Redesign Proposal — CERSAI",
+    "private": true,
+    "scripts": {
+        "format": "prettier --write .",
+        "format:check": "prettier --check ."
+    },
+    "devDependencies": {
+        "@prettier/plugin-xml": "^3.4.1",
+        "prettier": "^3.3.3"
+    }
+}
