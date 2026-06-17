@@ -91,11 +91,11 @@ ckyc-card-redesign-proposal/
 
 ## Card Preview
 
-### Proposed Front Side
-
 <p align="center">
-  <img src="cards/front.svg" alt="Proposed CKYC Card — Front Side" width="680"/>
+  <img src="cards/output.png" alt="Proposed CKYC Card — Front Side" width="680"/>
 </p>
+
+### Proposed Front Side
 
 **Front side contains:**
 
@@ -111,10 +111,6 @@ ckyc-card-redesign-proposal/
 - [Digital India logo](https://en.wikipedia.org/wiki/Digital_India#/media/File:Digital_India_logo.svg) (MeitY official mark, embedded as SVG)
 
 ### Proposed Back Side
-
-<p align="center">
-  <img src="cards/back.svg" alt="Proposed CKYC Card — Back Side" width="680"/>
-</p>
 
 **Back side contains:**
 

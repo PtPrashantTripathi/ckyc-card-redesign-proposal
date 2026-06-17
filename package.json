@@ -5,7 +5,8 @@
     "private": true,
     "scripts": {
         "format": "prettier --write .",
-        "format:check": "prettier --check ."
+        "format:check": "prettier --check .",
+        "build": "magick -density 300 \\( cards/front.svg -background white -alpha remove -alpha off -bordercolor white -border 5 \\) \\( cards/back.svg -background white -alpha remove -alpha off -bordercolor white -border 5 \\) +append -background white -gravity center -bordercolor white -border 20 cards/output.png"
     },
     "devDependencies": {
         "@prettier/plugin-xml": "^3.4.1",
