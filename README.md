@@ -39,7 +39,7 @@ major Indian identity documents.
 
 India has made remarkable strides in digital identity infrastructure. Documents
 like the **Aadhaar Card**, **PAN Card**, **Driving Licence**, and **Voter ID
-Card** are recognised globally for their thoughtful design, clear information
+Card** are recognised globally for their consistent layout, clear information
 hierarchy, and security features.
 
 The current CKYC card, while functionally sound, does not yet reflect the same
@@ -61,7 +61,7 @@ Government of India.
 | **Readability**         | High-contrast field labels and values; generous spacing; no visual clutter                                    |
 | **Security aesthetics** | Guilloche wave patterns, Ashoka Chakra-inspired watermarks, micro-line backgrounds, barcode security strips   |
 | **Indian identity**     | Tricolor strips (saffron, white, green) anchored within rounded card boundaries; deep navy government palette |
-| **Modern appearance**   | Clean typography, rounded card corners, structured grid layout, premium finish                                |
+| **Typography & spacing** | Clean type scale, rounded corners, grid-aligned fields — consistent with Aadhaar and PAN card conventions    |
 | **Two-sided design**    | Front holds identity fields; back holds address, QR verification, and legal information                       |
 | **Editable SVG**        | All text fields are plain SVG `<text>` elements — easy to update programmatically or in any vector editor     |
 
