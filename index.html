@@ -8,10 +8,11 @@
             content="An independent, voluntary redesign proposal for the CKYC card issued by CERSAI, Government of India. Created by Pt. Prashant Tripathi."
         />
         <meta name="author" content="Pt. Prashant Tripathi" />
+        <meta name="theme-color" content="#0d3554" />
         <meta property="og:title" content="CKYC Card Redesign Proposal — CERSAI" />
         <meta
             property="og:description"
-            content="A modern, premium redesign proposal for the Central KYC Records Registry card, created voluntarily for CERSAI and the Government of India."
+            content="An independent, voluntary redesign proposal for the CKYC card — structured layout, readable hierarchy, and Indian identity design conventions. Created by Pt. Prashant Tripathi."
         />
         <meta property="og:image" content="assets/images/ckyc_card_output.png" />
         <title>CKYC Card Redesign Proposal — CERSAI | Pt. Prashant Tripathi</title>
@@ -149,6 +150,13 @@
             .site-nav {
                 background: var(--navy-mid);
                 border-top: 1px solid rgba(255, 255, 255, 0.1);
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+            }
+
+            .site-nav::-webkit-scrollbar {
+                display: none;
             }
 
             .nav-inner {
@@ -157,24 +165,37 @@
                 padding: 0 24px;
                 display: flex;
                 gap: 0;
+                white-space: nowrap;
             }
 
             .nav-inner a {
                 color: #c8dff0;
                 font-size: 13.5px;
                 padding: 12px 18px;
-                display: block;
+                display: inline-block;
                 border-bottom: 3px solid transparent;
                 transition:
                     color 0.2s,
                     border-color 0.2s;
                 letter-spacing: 0.3px;
+                flex-shrink: 0;
             }
 
             .nav-inner a:hover {
                 color: #ffffff;
                 border-bottom-color: var(--saffron);
                 text-decoration: none;
+            }
+
+            @media (max-width: 480px) {
+                .nav-inner {
+                    padding: 0 12px;
+                }
+
+                .nav-inner a {
+                    padding: 11px 13px;
+                    font-size: 13px;
+                }
             }
 
             /* Main Content */
@@ -768,13 +789,13 @@
                 <div class="header-text">
                     <p class="header-gov">Government of India</p>
                     <h1 class="header-title">
-                        Central Registry of Securitisation Asset<br />Reconstruction and Security Interest of India
+                        Central Registry of Securitisation Asset Reconstruction and Security Interest of India
                     </h1>
                     <p class="header-subtitle">CKYC Card Redesign Proposal — Independent Design Submission</p>
                 </div>
                 <span class="header-badge">Design Proposal</span>
             </div>
-            <nav class="site-nav">
+            <nav class="site-nav" aria-label="Page sections">
                 <div class="nav-inner">
                     <a href="#letter">Open Letter</a>
                     <a href="#existing">Existing Card</a>
@@ -1112,9 +1133,9 @@
                         <p class="creator-role">Independent Software Engineer &amp; Open-Source Contributor</p>
                         <p class="creator-bio">
                             Independent software engineer, open-source contributor, and technology enthusiast with an
-                            interest in improving digital and citizen-facing experiences through thoughtful design and
-                            engineering. Passionate about the intersection of good governance and modern technology, and
-                            committed to contributing to India's digital public infrastructure in whatever way he can.
+                            interest in improving digital and citizen-facing experiences through engineering. Interested
+                            in the intersection of good governance and modern technology, and committed to contributing
+                            to India's digital public infrastructure in whatever way he can.
                         </p>
                         <div class="creator-links">
                             <a href="mailto:PtPrashantTripathi@outlook.com" class="creator-link">
@@ -1134,7 +1155,7 @@
                             <a
                                 href="https://github.com/PtPrashantTripathi"
                                 target="_blank"
-                                rel="noopener"
+                                rel="noopener noreferrer"
                                 class="creator-link"
                             >
                                 <svg viewBox="0 0 24 24" fill="currentColor">
@@ -1160,7 +1181,6 @@
                     </blockquote>
                 </div>
             </section>
-            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
             <!-- LICENSE -->
             <section class="section" id="license">
@@ -1170,7 +1190,7 @@
 
                 <div class="license-card">
                     <div class="license-badge-wrap">
-                        <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">
+                        <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">
                             <img
                                 src="https://licensebuttons.net/l/by/4.0/88x31.png"
                                 alt="CC BY 4.0 License Badge"
@@ -1220,7 +1240,7 @@
                     <a
                         href="https://github.com/PtPrashantTripathi/ckyc-card-redesign-proposal"
                         target="_blank"
-                        rel="noopener"
+                        rel="noopener noreferrer"
                         >GitHub Repository</a
                     >
                 </div>
@@ -1234,15 +1254,15 @@
                 <div class="footer-col">
                     <h4>Contact</h4>
                     <a href="mailto:PtPrashantTripathi@outlook.com">PtPrashantTripathi@outlook.com</a>
-                    <a href="https://github.com/PtPrashantTripathi" target="_blank" rel="noopener"
+                    <a href="https://github.com/PtPrashantTripathi" target="_blank" rel="noopener noreferrer"
                         >github.com/PtPrashantTripathi</a
                     >
                 </div>
                 <div class="footer-col">
                     <h4>Official Links</h4>
-                    <a href="https://www.cersai.org.in" target="_blank" rel="noopener">CERSAI Official Website</a>
-                    <a href="https://www.india.gov.in" target="_blank" rel="noopener">Government of India</a>
-                    <a href="https://www.rbi.org.in" target="_blank" rel="noopener">Reserve Bank of India</a>
+                    <a href="https://www.cersai.org.in" target="_blank" rel="noopener noreferrer">CERSAI Official Website</a>
+                    <a href="https://www.india.gov.in" target="_blank" rel="noopener noreferrer">Government of India</a>
+                    <a href="https://www.rbi.org.in" target="_blank" rel="noopener noreferrer">Reserve Bank of India</a>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -1252,7 +1272,7 @@
                     <a
                         href="https://creativecommons.org/licenses/by/4.0/"
                         target="_blank"
-                        rel="noopener"
+                        rel="noopener noreferrer"
                         style="color: #8aa8c0"
                         >CC BY 4.0</a
                     >
@@ -1262,5 +1282,6 @@
         </footer>
 
         <div class="tricolor"></div>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </body>
 </html>
