@@ -1,0 +1,32 @@
+{
+    "plugins": ["@prettier/plugin-xml"],
+    "printWidth": 100,
+    "tabWidth": 4,
+    "useTabs": false,
+    "overrides": [
+        {
+            "files": ["*.html"],
+            "options": {
+                "parser": "html",
+                "htmlWhitespaceSensitivity": "css",
+                "printWidth": 120
+            }
+        },
+        {
+            "files": ["*.md"],
+            "options": {
+                "parser": "markdown",
+                "proseWrap": "always",
+                "printWidth": 80
+            }
+        },
+        {
+            "files": ["*.svg"],
+            "options": {
+                "parser": "xml",
+                "xmlWhitespaceSensitivity": "ignore",
+                "printWidth": 120
+            }
+        }
+    ]
+}
