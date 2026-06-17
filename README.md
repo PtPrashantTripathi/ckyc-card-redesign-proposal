@@ -31,7 +31,7 @@ to match the visual quality, usability, and security standards seen in other
 major Indian identity documents.
 
 **Live preview:**
-[https://ptprashanttripathi.github.io/ckyc-redesign-proposal](https://ptprashanttripathi.github.io/ckyc-redesign-proposal)
+[https://ptprashanttripathi.github.io/ckyc-card-redesign-proposal](https://ptprashanttripathi.github.io/ckyc-card-redesign-proposal)
 
 ---
 
